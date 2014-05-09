@@ -63,7 +63,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
     private final ClusterManager<T> mClusterManager;
     private final float mDensity;
 
-    private static final int[] BUCKETS = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 300, 400, 500, 1000};
+    private static final int[] BUCKETS = {20, 25, 30, 35, 40, 50, 60, 70, 80, 90, 100, 120, 150, 200, 250, 300, 350, 400, 450, 500};
     private ShapeDrawable mColoredCircleBackground;
 
     /**
@@ -84,7 +84,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
     /**
      * If cluster size is less than this size, display individual markers.
      */
-    private static final int MIN_CLUSTER_SIZE = 4;
+    private static final int MIN_CLUSTER_SIZE = 3;
 
     /**
      * The currently displayed set of clusters.
