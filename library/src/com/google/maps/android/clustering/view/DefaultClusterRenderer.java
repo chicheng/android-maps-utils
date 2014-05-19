@@ -84,7 +84,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
     /**
      * If cluster size is less than this size, display individual markers.
      */
-    private static final int MIN_CLUSTER_SIZE = 3;
+    private static final int MIN_CLUSTER_SIZE = 20;
 
     /**
      * The currently displayed set of clusters.
@@ -174,19 +174,20 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         squareTextView.setLayoutParams(layoutParams);
         squareTextView.setId(R.id.text);
-        int twelveDpi = (int) (12 * mDensity);
+        int twelveDpi = (int) (18 * mDensity);
         squareTextView.setPadding(twelveDpi, twelveDpi, twelveDpi, twelveDpi);
         return squareTextView;
     }
 
     private int getColor(int clusterSize) {
-        final float hueRange = 220;
-        final float sizeRange = 300;
-        final float size = Math.min(clusterSize, sizeRange);
-        final float hue = (sizeRange - size) * (sizeRange - size) / (sizeRange * sizeRange) * hueRange;
-        return Color.HSVToColor(new float[]{
-                hue, 1f, .6f
-        });
+//        final float hueRange = 220;
+//        final float sizeRange = 300;
+//        final float size = Math.min(clusterSize, sizeRange);
+//        final float hue = (sizeRange - size) * (sizeRange - size) / (sizeRange * sizeRange) * hueRange;
+//        return Color.HSVToColor(new float[]{
+//                hue, 1f, .6f
+//        });
+    	return Color.argb(255, 0, 177, 208);
     }
 
     protected String getClusterText(int bucket) {
