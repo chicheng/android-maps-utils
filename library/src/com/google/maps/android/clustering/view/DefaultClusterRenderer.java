@@ -704,7 +704,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
         BitmapDescriptor descriptor = mIcons.get(bucket);
         if (descriptor == null) {
             mColoredCircleBackground.getPaint().setColor(getColor(bucket));
-            descriptor = BitmapDescriptorFactory.fromBitmap(mIconGenerator.makeIcon(Integer.toString(bucket)));
+            descriptor = BitmapDescriptorFactory.fromBitmap(mIconGenerator.makeIcon(Integer.toString(cluster.getSize())));
             mIcons.put(bucket, descriptor);
         }
         // TODO: consider adding anchor(.5, .5) (Individual markers will overlap more often)
