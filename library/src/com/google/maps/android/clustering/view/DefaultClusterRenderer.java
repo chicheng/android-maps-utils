@@ -86,7 +86,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
     /**
      * If cluster size is less than this size, display individual markers.
      */
-    private static final int MIN_CLUSTER_SIZE = 15;
+    private static final int MIN_CLUSTER_SIZE = 10;
 
     /**
      * The currently displayed set of clusters.
