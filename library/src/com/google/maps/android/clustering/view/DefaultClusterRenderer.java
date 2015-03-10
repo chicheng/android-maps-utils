@@ -18,6 +18,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.MessageQueue;
 import android.util.SparseArray;
+import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 
@@ -177,7 +178,8 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         squareTextView.setLayoutParams(layoutParams);
         squareTextView.setId(R.id.text);
-        int twelveDpi = (int) (18 * mDensity);
+        squareTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        int twelveDpi = (int) (20 * mDensity);
         squareTextView.setPadding(twelveDpi, twelveDpi, twelveDpi, twelveDpi);
         return squareTextView;
     }
